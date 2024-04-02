@@ -15,7 +15,7 @@ let myPromise = new Promise(function (resolve, reject) {
             reject('Hi rejected');
         }
     }, 2000)
-}) 
+})
 
 //pending state
 
@@ -24,11 +24,11 @@ let myPromise = new Promise(function (resolve, reject) {
 //fulfilled - then method and catch method
 //consuming a promise
 
-myPromise.then(function(result){  // result will come based on promise resolved
-console.log(result);
+myPromise.then(function (result) {  // result will come based on promise resolved
+    console.log(result);
 }) //fullfiled state
 
-myPromise.catch(function(fieldresult){
+myPromise.catch(function (fieldresult) {
     console.log(fieldresult);
 }) //rejected state
 
