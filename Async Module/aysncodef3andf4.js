@@ -13,38 +13,38 @@ const fs = require('fs');
 
 console.log('Before');
 
-fs.readFile('f3.txt',cb1) //call back // it will execute this function at the last and its not waiting
+fs.readFile('f3.txt', cb1) //call back // it will execute this function at the last and its not waiting
 
-function cb1(err, data){
-    if(err){
+function cb1(err, data) {
+    if (err) {
         console.log(err);
     }
-    else{
-        console.log('file 3 data'+ data);
-        fs.readFile('f4.txt',cb2) //to execute the data sequentially or serially add this line here
+    else {
+        console.log('file 3 data' + data);
+        fs.readFile('f4.txt', cb2) //to execute the data sequentially or serially add this line here
     }
 }
 
 // fs.readFile('f4.txt',cb2) 
 
-function cb2(err, data){
-    if(err){
+function cb2(err, data) {
+    if (err) {
         console.log(err);
     }
-    else{
-        console.log('file 4 data '+ data);
-        fs.readFile('f5.txt',cb3) // for sequentially execution
+    else {
+        console.log('file 4 data ' + data);
+        fs.readFile('f5.txt', cb3) // for sequentially execution
     }
 }
 
 // fs.readFile('f5.txt',cb3)  //for ramdomly execution
 
-function cb3(err, data){
-    if(err){
+function cb3(err, data) {
+    if (err) {
         console.log(err);
     }
-    else{
-        console.log('file 5 data '+ data);
+    else {
+        console.log('file 5 data ' + data);
     }
 }
 
